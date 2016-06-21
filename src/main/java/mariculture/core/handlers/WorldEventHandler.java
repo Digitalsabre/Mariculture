@@ -43,7 +43,7 @@ public class WorldEventHandler {
                 provider.stoneNoise = provider.field_147430_m.func_151599_a(provider.stoneNoise, (double) (event.chunkX * 16), (double) (event.chunkZ * 16), 16, 16, d0 * 2.0D, d0 * 2.0D, 1.0D);
                 for (int k = 0; k < 16; ++k) {
                     for (int l = 0; l < 16; ++l) {
-                        BiomeGenBase biome = event.biomeArray[l + k * 16];
+                        BiomeGenBase biome = event.biomeArray[l * 16 + k];
                         if (BiomeDictionary.isBiomeOfType(biome, Type.WATER) || BiomeDictionary.isBiomeOfType(biome, Type.BEACH)) {
                             if (WorldGen.VARYING_LIMESTONE) {
                                 if (BiomeDictionary.isBiomeOfType(biome, Type.BEACH)) {
