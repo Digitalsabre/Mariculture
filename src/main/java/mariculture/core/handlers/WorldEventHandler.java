@@ -57,13 +57,9 @@ public class WorldEventHandler {
                                  :                                                    WorldGen.OCEAN_LIMESTONE
                                  ;
                     genBiomeTerrain(event, k, l, biome, depth, provider.stoneNoise);
-                } else {
-                    biome.genTerrainBlocks(event.world, event.world.rand, event.blockArray, event.metaArray, event.chunkX * 16 + k, event.chunkZ * 16 + l, provider.stoneNoise[l + k * 16]);
                 }
             }
         }
-
-        event.setResult(Result.DENY);
     }
 
     private void genBiomeTerrain(ReplaceBiomeBlocks event, int k, int l, BiomeGenBase biome, double depth, double[] noise) {
